@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ComponentTestController;
+use App\Http\Controllers\ServiceContainerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,7 @@ require __DIR__ . '/auth.php';
 Route::get('/component-test1', [ComponentTestController::class, 'showComponent1']);
 
 Route::get('/component-test2', [ComponentTestController::class, 'showComponent2']);
+
+Route::get('/service-container-test', [ServiceContainerController::class, 'showServiceContainerTest']);
+
+Route::get('/service-provider-test', [ServiceContainerController::class, 'showServiceProviderTest']);
