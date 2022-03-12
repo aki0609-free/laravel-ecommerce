@@ -20,11 +20,11 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
-        @if(auth('admin')->user())
+        @if(Auth::guard('admin')->check())
         @include('layouts.admin-navigation')
-        @elseif(auth('owners')->user())
+        @elseif(Auth::guard('owners')->check())
         @include('layouts.owner-navigation')
-        @elseif(auth('users')->user())
+        @elseif(Auth::guard('users')->check())
         @include('layouts.user-navigation')
         @endif
         <!-- Page Heading -->
